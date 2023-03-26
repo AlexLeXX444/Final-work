@@ -13,13 +13,13 @@ public class MainController {
         return "main_page";
     }
 
-    @GetMapping("/sucsess")
-    public String sucsessPage() {
-        return "sucsess";
+    @GetMapping("/home_pets")
+    public String homePetsPage() {
+        return "home_pets";
     }
 
-    @GetMapping("/false")
-    public String falsePage() {
-        return "false";
+    @GetMapping("/pack_pets")
+    public String packPetsPage() {
+        return "pack_pets";
     }
 }

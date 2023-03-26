@@ -12,22 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class CatController {
     private final CatService catService;
 
-    @GetMapping("/cat")
-    public String catMain() {
-        return "cats/cat";
-    }
-
-    @GetMapping("/cat/cat_create")
-    public String createCatForm() {
-        return "cats/cat_create";
-    }
-
     @PostMapping("/cat/create")
     public String createCat(Cat cat) {
         if (cat.getName().isEmpty() || cat.getBirthDate() == null) {
             return "redirect:/cat/cat_create";
         }
         catService.createCat(cat);
-        return "redirect:/sucsess";
+        return "redirect:/cat";
     }
 }
