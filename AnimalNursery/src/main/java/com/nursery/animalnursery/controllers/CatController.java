@@ -14,9 +14,9 @@ public class CatController {
     @PostMapping("/cat/create")
     public String createCat(Cat cat) {
         if (cat.getName().isEmpty() || cat.getBirthDate() == null) {
-            return "redirect:/home_pets";
+            return "redirect:/create_pet";
         }
         catService.createCat(cat);
-        return "redirect:/home_pets";
+        return "redirect:/index";
     }
 }

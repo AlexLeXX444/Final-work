@@ -14,18 +14,6 @@ public class MainController {
 
     @GetMapping("/")
     public String mainPage() {
-        return "main_page";
-    }
-
-    @GetMapping("/home_pets")
-    public String homePetsPage(Cat cat, Model model) {
-        model.addAttribute("cat", cat);
-        model.addAttribute("cats", catService.listCats());
-        return "home_pets";
-    }
-
-    @GetMapping("/pack_pets")
-    public String packPetsPage() {
-        return "pack_pets";
+        return "index";
     }
 }
