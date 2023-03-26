@@ -4,7 +4,6 @@ import com.nursery.animalnursery.models.HomePets.Cat;
 import com.nursery.animalnursery.services.CatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -15,9 +14,9 @@ public class CatController {
     @PostMapping("/cat/create")
     public String createCat(Cat cat) {
         if (cat.getName().isEmpty() || cat.getBirthDate() == null) {
-            return "redirect:/cat/cat_create";
+            return "redirect:/home_pets";
         }
         catService.createCat(cat);
-        return "redirect:/cat";
+        return "redirect:/home_pets";
     }
 }
