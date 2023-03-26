@@ -18,14 +18,14 @@ public class CatController {
     }
 
     @GetMapping("/cat/cat_create")
-    public String catCreateForm() {
+    public String createCatForm() {
         return "cats/cat_create";
     }
 
     @PostMapping("/cat/create")
     public String createCat(Cat cat) {
-        if (cat == null) {
-            return "redirect:/false";
+        if (cat.getName().isEmpty() || cat.getBirthDate() == null) {
+            return "redirect:/cat/cat_create";
         }
         catService.createCat(cat);
         return "redirect:/sucsess";

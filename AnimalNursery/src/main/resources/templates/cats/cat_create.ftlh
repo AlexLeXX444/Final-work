@@ -9,8 +9,7 @@
         <form action="/cat/create" method="post">
             Имя (кличка): <input type="text" name="name"/><br><br>
             Дата рождения: <input type="date" name="birthDate"/><br><br>
-            Команды, которые может выполнять: <input type="text" name="commands"/><br><br>
-            (через пробел)<br><br>
+            Команды, которые может выполнять: <input type="text" name="petCommands"/>  (через пробел)<br><br>
             <input type="submit" value="Добавить питомца"/>
         </form>
     </body>

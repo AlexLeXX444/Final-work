@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,6 +25,6 @@ public abstract class BasePet {
     private Date birthDate;
 
     @Column(name = "pet_commands")
-    @ManyToMany
-    private List<Command> commands = new ArrayList<>();
+    @ElementCollection
+    private List<String> petCommands = new ArrayList<>();
 }

@@ -13,6 +13,7 @@ import lombok.EqualsAndHashCode;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Data
 public abstract class HomePet extends BasePet {
+
     @Column(name = "pet_type")
     private final String petType = "Home pet";
 }
