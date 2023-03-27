@@ -10,6 +10,7 @@ import com.nursery.animalnursery.repositoryes.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -46,13 +47,27 @@ public class PetService {
         camelRepository.save(camel);
     }
 
-    public Optional<?> petById(Long id) {
-        if (hamsterRepository.findById(id).isPresent()) return hamsterRepository.findById(id);
-        if (catRepository.findById(id).isPresent()) return catRepository.findById(id);
-        if (dogRepository.findById(id).isPresent()) return dogRepository.findById(id);
-        if (donkeyRepository.findById(id).isPresent()) return donkeyRepository.findById(id);
-        if (horseRepository.findById(id).isPresent()) return horseRepository.findById(id);
-        if (camelRepository.findById(id).isPresent()) return camelRepository.findById(id);
-        return null;
+    public List<Hamster> getListHamsters() {
+        return hamsterRepository.findAll();
+    }
+
+    public List<Cat> getListCats() {
+        return catRepository.findAll();
+    }
+
+    public List<Dog> getListDogs() {
+        return dogRepository.findAll();
+    }
+
+    public List<Donkey> getListDonkeys() {
+        return donkeyRepository.findAll();
+    }
+
+    public List<Horse> getListHorses() {
+        return horseRepository.findAll();
+    }
+
+    public List<Camel> getListCamels() {
+        return camelRepository.findAll();
     }
 }

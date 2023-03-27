@@ -14,7 +14,7 @@
 
             <div class="topnav" id="myTopnav">
                 <a href="/" class="active">Главная</a>
-                <a href="#news">Список всех</a>
+                <a href="/list_of_pets">Список всех</a>
                 <div class="dropdown">
                     <button class="dropbtn">Добавить
                         <i class="fa fa-caret-down"></i>
