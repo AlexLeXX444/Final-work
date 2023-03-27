@@ -17,4 +17,9 @@ public class MainController {
     public String createHomePetPage() {
         return "create_home_pet";
     }
+
+    @GetMapping("/create_pack_pet")
+    public String createPacketPage() {
+        return "create_pack_pet";
+    }
 }

@@ -1,6 +1,6 @@
 package com.nursery.animalnursery;
 
-import com.nursery.animalnursery.models.HomePets.Cat;
+import com.nursery.animalnursery.models.homepets.Cat;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -21,7 +21,7 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="/create_home_pet">Домашние животные</a>
-                        <a href="#">Вьючные животные</a>
+                        <a href="/create_pack_pet">Вьючные животные</a>
                     </div>
                 </div>
                 <a href="#about">Изменить</a>

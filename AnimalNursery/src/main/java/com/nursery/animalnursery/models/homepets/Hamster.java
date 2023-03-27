@@ -1,4 +1,4 @@
-package com.nursery.animalnursery.models.HomePets;
+package com.nursery.animalnursery.models.homepets;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrePersist;

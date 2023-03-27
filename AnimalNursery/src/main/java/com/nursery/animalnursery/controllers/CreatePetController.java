@@ -1,8 +1,11 @@
 package com.nursery.animalnursery.controllers;
 
-import com.nursery.animalnursery.models.HomePets.Cat;
-import com.nursery.animalnursery.models.HomePets.Dog;
-import com.nursery.animalnursery.models.HomePets.Hamster;
+import com.nursery.animalnursery.models.homepets.Cat;
+import com.nursery.animalnursery.models.homepets.Dog;
+import com.nursery.animalnursery.models.homepets.Hamster;
+import com.nursery.animalnursery.models.packpets.Camel;
+import com.nursery.animalnursery.models.packpets.Donkey;
+import com.nursery.animalnursery.models.packpets.Horse;
 import com.nursery.animalnursery.services.PetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -37,6 +40,33 @@ public class CreatePetController {
             return "redirect:/create_home_pet";
         }
         petService.createDog(dog);
+        return "redirect:/";
+    }
+
+    @PostMapping("/pet_create/donkey")
+    public String createDog(Donkey donkey) {
+        if (donkey.getName() == null || donkey.getBirthDate() == null) {
+            return "redirect:/create_home_pet";
+        }
+        petService.createDonkey(donkey);
+        return "redirect:/";
+    }
+
+    @PostMapping("/pet_create/horse")
+    public String createHorse(Horse horse) {
+        if (horse.getName() == null || horse.getBirthDate() == null) {
+            return "redirect:/create_home_pet";
+        }
+        petService.createHorse(horse);
+        return "redirect:/";
+    }
+
+    @PostMapping("/pet_create/camel")
+    public String createCamel(Camel camel) {
+        if (camel.getName() == null || camel.getBirthDate() == null) {
+            return "redirect:/create_home_pet";
+        }
+        petService.createCamel(camel);
         return "redirect:/";
     }
 }

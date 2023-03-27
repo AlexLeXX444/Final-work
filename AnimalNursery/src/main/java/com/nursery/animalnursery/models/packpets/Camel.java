@@ -1,4 +1,4 @@
-package com.nursery.animalnursery.models.HomePets;
+package com.nursery.animalnursery.models.packpets;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrePersist;
@@ -13,15 +13,15 @@ import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "dogs")
+@Table(name = "camels")
 @Data
 @AllArgsConstructor
-public class Dog extends HomePet {
+public class Camel extends PackPet{
 
     @PrePersist
     public void init() {}
 
-    public Dog(String name, Date birthDate, String petCommands) {
+    public Camel(String name, Date birthDate, String petCommands) {
         super.setName(name);
         super.setBirthDate(birthDate);
         if (petCommands.length() > 0) {

@@ -33,14 +33,14 @@
             </div>
 
             <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'hamsterAdd')">Хомяки</button>
-                <button class="tablinks" onclick="openTab(event, 'catAdd')">Кошки</button>
-                <button class="tablinks" onclick="openTab(event, 'dogAdd')">Собаки</button>
+                <button class="tablinks" onclick="openTab(event, 'donkeyAdd')">Ослы</button>
+                <button class="tablinks" onclick="openTab(event, 'horseAdd')">Лошади</button>
+                <button class="tablinks" onclick="openTab(event, 'camelAdd')">Верблюды</button>
             </div>
 
-            <div id="hamsterAdd" class="tabcontent">
-                <h3>Хомяки</h3>
-                <form action="/pet_create/hamster" method="post" enctype="multipart/form-data">
+            <div id="donkeyAdd" class="tabcontent">
+                <h3>Ослы</h3>
+                <form action="/pet_create/donkey" method="post" enctype="multipart/form-data">
                     Имя: <input type="text" name="name"/><br><br>
                     Дата рождения: <input type="date" name="birthDate"/><br><br>
                     Список команд: <input type="text" name="petCommands"/>  (через пробел)<br><br>
@@ -48,9 +48,9 @@
                 </form>
             </div>
 
-            <div id="catAdd" class="tabcontent">
-                <h3>Кошки</h3>
-                <form action="/pet_create/cat" method="post" enctype="multipart/form-data">
+            <div id="horseAdd" class="tabcontent">
+                <h3>Лошади</h3>
+                <form action="/pet_create/horse" method="post" enctype="multipart/form-data">
                     Имя: <input type="text" name="name"/><br><br>
                     Дата рождения: <input type="date" name="birthDate"/><br><br>
                     Список команд: <input type="text" name="petCommands"/>  (через пробел)<br><br>
@@ -58,9 +58,9 @@
                 </form>
             </div>
 
-            <div id="dogAdd" class="tabcontent">
-                <h3>Собаки</h3>
-                <form action="/pet_create/dog" method="post" enctype="multipart/form-data">
+            <div id="camelAdd" class="tabcontent">
+                <h3>Верблюды</h3>
+                <form action="/pet_create/camel" method="post" enctype="multipart/form-data">
                     Имя: <input type="text" name="name"/><br><br>
                     Дата рождения: <input type="date" name="birthDate"/><br><br>
                     Список команд: <input type="text" name="petCommands"/>  (через пробел)<br><br>

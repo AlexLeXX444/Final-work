@@ -1,4 +1,4 @@
-package com.nursery.animalnursery.models.HomePets;
+package com.nursery.animalnursery.models.homepets;
 
 import com.nursery.animalnursery.models.BasePet;
 import jakarta.persistence.Column;
