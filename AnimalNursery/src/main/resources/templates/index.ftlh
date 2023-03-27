@@ -12,15 +12,35 @@
                 <h1>ПИТОМНИК ДЛЯ ЖИВОТНЫХ</h1>
             </div>
 
-            <div class="navbar">
-                <a href="/">Главная</a>
-                <a href="#">Добавить</a>
-                <a href="#">Список всех</a>
-                <a href="#">Изменить данные</a>
+            <div class="topnav" id="myTopnav">
+                <a href="/" class="active">Главная</a>
+                <a href="#news">Список всех</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Добавить
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/create_home_pet">Домашние животные</a>
+                        <a href="#">Вьючные животные</a>
+                    </div>
+                </div>
+                <a href="#about">Изменить</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
 
             <div class="row">
                 <div class="main">Some text</div>
             </div>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
         </body>
     </html>
