@@ -15,7 +15,10 @@ public class ReturnPetInfoController {
 
     @GetMapping("/list_of_pets")
     public String listOfPetsPage(Model model) {
+        model.addAttribute("hamsters", petService.getListHamsters());
         model.addAttribute("cats", petService.getListCats());
+        model.addAttribute("dogs", petService.getListDogs());
+        model.addAttribute("donkeys", petService.getListDonkeys());
         model.addAttribute("dogs", petService.getListDogs());
         return "list_of_pets";
     }
