@@ -1,6 +1,5 @@
 package com.nursery.animalnursery.controllers;
 
-import com.nursery.animalnursery.models.homepets.Hamster;
 import com.nursery.animalnursery.services.PetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -22,31 +21,31 @@ public class RedactPetController {
 
     @GetMapping("/redact/cat/{catId}")
     public String catEdit(@PathVariable("catId") Long catId, Model model) {
-        model.addAttribute("cat", petService.hamsterById(catId));
+        model.addAttribute("cat", petService.catById(catId));
         return "/redact/redact_cat";
     }
 
     @GetMapping("/redact/dog/{dogId}")
     public String dogEdit(@PathVariable("dogId") Long dogId, Model model) {
-        model.addAttribute("dog", petService.hamsterById(dogId));
+        model.addAttribute("dog", petService.dogById(dogId));
         return "/redact/redact_dog";
     }
 
     @GetMapping("/redact/donkey/{donkeyId}")
     public String donkeyEdit(@PathVariable("donkeyId") Long donkeyId, Model model) {
-        model.addAttribute("donkey", petService.hamsterById(donkeyId));
+        model.addAttribute("donkey", petService.donkeyById(donkeyId));
         return "/redact/redact_donkey";
     }
 
     @GetMapping("/redact/horse/{horseId}")
     public String horseEdit(@PathVariable("horseId") Long horseId, Model model) {
-        model.addAttribute("horse", petService.hamsterById(horseId));
+        model.addAttribute("horse", petService.horseById(horseId));
         return "/redact/redact_horse";
     }
 
     @GetMapping("/redact/camel/{camelId}")
     public String camelEdit(@PathVariable("camelId") Long camelId, Model model) {
-        model.addAttribute("camel", petService.hamsterById(camelId));
+        model.addAttribute("camel", petService.camelById(camelId));
         return "/redact/redact_camel";
     }
 
