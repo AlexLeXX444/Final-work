@@ -24,13 +24,10 @@
                         <a href="/create_pack_pet">Вьючные животные</a>
                     </div>
                 </div>
-                <a href="#about">Изменить</a>
+                <a href="/redact_pet">Изменить</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
 
-            <div class="row">
-                <div class="main"><b>Кошки</b></div>
-            </div>
             <table>
                 <tr>
                     <th>ID</th>
@@ -38,6 +35,35 @@
                     <th>Дата рождения</th>
                     <th>Список выполняемых команд</th>
                 </tr>
+            </table>
+
+            <div class="row">
+                <div class="main"><b>Хомяки</b></div>
+            </div>
+            <table>
+                <#list hamsters as hamster>
+                    <tr>
+                        <th>${hamster.id}</th>
+                        <th>${hamster.name}</th>
+                        <th>${hamster.birthDate}</th>
+                        <th><#list hamster.petCommands as commands>${commands}</#list></th>
+                        <th><a href="#">Редактировать</a> </th>
+                    </tr>
+                <#else>
+                    <tr>
+                        <th>Нет записей</th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </#list>
+            </table><br><br>
+
+            <div class="row">
+                <div class="main"><b>Кошки</b></div>
+            </div>
+            <table>
                 <#list cats as cat>
                     <tr>
                         <th>${cat.id}</th>
@@ -47,7 +73,9 @@
                         <th><a href="#">Редактировать</a> </th>
                     </tr>
                 <#else>
-                    <h3>Нет записей</h3>
+                    <tr>
+                        <th>Нет записей</th>
+                    </tr>
                 </#list>
             </table><br><br>
 
@@ -55,12 +83,6 @@
                 <div class="main"><b>Собаки</b></div>
             </div>
             <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Имя</th>
-                    <th>Дата рождения</th>
-                    <th>Список выполняемых команд</th>
-                </tr>
                 <#list dogs as dog>
                     <tr>
                         <th>${dog.id}</th>
@@ -70,8 +92,71 @@
                         <th><a href="#">Редактировать</a> </th>
                     </tr>
                 <#else>
-                    <h3>Нет записей</h3>
+                    <tr>
+                        <th>Нет записей</th>
+                    </tr>
                 </#list>
+
+            </table><br><br>
+
+            <div class="row">
+                <div class="main"><b>Ослы</b></div>
+            </div>
+            <table>
+                <#list donkeys as donkey>
+                    <tr>
+                        <th>${donkey.id}</th>
+                        <th>${donkey.name}</th>
+                        <th>${donkey.birthDate}</th>
+                        <th><#list donkey.petCommands as commands>${commands}</#list></th>
+                        <th><a href="#">Редактировать</a> </th>
+                    </tr>
+                <#else>
+                    <tr>
+                        <th>Нет записей</th>
+                    </tr>
+                </#list>
+
+            </table><br><br>
+
+            <div class="row">
+                <div class="main"><b>Лошади</b></div>
+            </div>
+            <table>
+                <#list horses as horse>
+                    <tr>
+                        <th>${horse.id}</th>
+                        <th>${horse.name}</th>
+                        <th>${horse.birthDate}</th>
+                        <th><#list horse.petCommands as commands>${commands}</#list></th>
+                        <th><a href="#">Редактировать</a> </th>
+                    </tr>
+                <#else>
+                    <tr>
+                        <th>Нет записей</th>
+                    </tr>
+                </#list>
+
+            </table><br><br>
+
+            <div class="row">
+                <div class="main"><b>Верблюды</b></div>
+            </div>
+            <table>
+                <#list camels as camel>
+                    <tr>
+                        <th>${camel.id}</th>
+                        <th>${camel.name}</th>
+                        <th>${camel.birthDate}</th>
+                        <th><#list camel.petCommands as commands>${commands}</#list></th>
+                        <th><a href="#">Редактировать</a> </th>
+                    </tr>
+                <#else>
+                    <tr>
+                        <th>Нет записей</th>
+                    </tr>
+                </#list>
+
             </table><br><br>
 
             <script>

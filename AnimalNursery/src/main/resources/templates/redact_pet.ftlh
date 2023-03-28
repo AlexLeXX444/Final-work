@@ -13,7 +13,7 @@
             </div>
 
             <div class="topnav" id="myTopnav">
-                <a href="/" class="active">Главная</a>
+                <a href="/">Главная</a>
                 <a href="/list_of_pets">Список всех</a>
                 <div class="dropdown">
                     <button class="dropbtn">Добавить
@@ -24,13 +24,11 @@
                         <a href="/create_pack_pet">Вьючные животные</a>
                     </div>
                 </div>
-                <a href="/redact_pet">Изменить</a>
+                <a href="/redact_pet" class="active">Изменить</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
 
-            <div class="row">
-                <div class="main">Some text</div>
-            </div>
+
 
             <script>
                 function myFunction() {

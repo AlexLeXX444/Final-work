@@ -19,7 +19,8 @@ public class ReturnPetInfoController {
         model.addAttribute("cats", petService.getListCats());
         model.addAttribute("dogs", petService.getListDogs());
         model.addAttribute("donkeys", petService.getListDonkeys());
-        model.addAttribute("dogs", petService.getListDogs());
+        model.addAttribute("horses", petService.getListHorses());
+        model.addAttribute("camels", petService.getListCamels());
         return "list_of_pets";
     }
 }

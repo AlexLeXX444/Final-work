@@ -46,7 +46,7 @@ public class CreatePetController {
     @PostMapping("/pet_create/donkey")
     public String createDog(Donkey donkey) {
         if (donkey.getName() == null || donkey.getBirthDate() == null) {
-            return "redirect:/create_home_pet";
+            return "redirect:/create_pack_pet";
         }
         petService.createDonkey(donkey);
         return "redirect:/";
@@ -55,7 +55,7 @@ public class CreatePetController {
     @PostMapping("/pet_create/horse")
     public String createHorse(Horse horse) {
         if (horse.getName() == null || horse.getBirthDate() == null) {
-            return "redirect:/create_home_pet";
+            return "redirect:/create_pack_pet";
         }
         petService.createHorse(horse);
         return "redirect:/";
@@ -64,7 +64,7 @@ public class CreatePetController {
     @PostMapping("/pet_create/camel")
     public String createCamel(Camel camel) {
         if (camel.getName() == null || camel.getBirthDate() == null) {
-            return "redirect:/create_home_pet";
+            return "redirect:/create_pack_pet";
         }
         petService.createCamel(camel);
         return "redirect:/";
