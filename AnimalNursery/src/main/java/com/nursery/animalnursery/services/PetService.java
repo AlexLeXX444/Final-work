@@ -95,13 +95,10 @@ public class PetService {
         return camelRepository.findById(id).orElse(null);
     }
 
-    public void redactHamster(Hamster hamster) {
-        Hamster redactedHamster = hamsterRepository.findById(hamster.getId()).orElse(null);
+    public void redactHamsterCommands(Long id, List<String> petCommands) {
+        Hamster redactedHamster = hamsterRepository.findById(id).orElse(null);
         if (redactedHamster != null) {
-            redactedHamster.setName(hamster.getName());
-            redactedHamster.setBirthDate(hamster.getBirthDate());
-            redactedHamster.setPetCommands(hamster.getPetCommands());
-            System.out.println(redactedHamster.toString());
+            redactedHamster.setPetCommands(petCommands);
             hamsterRepository.save(redactedHamster);
         }
     }

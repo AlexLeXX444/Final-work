@@ -22,9 +22,4 @@ public class MainController {
     public String createPackPetPage() {
         return "create_pack_pet";
     }
-
-    @GetMapping("/redact_pet")
-    public String redactPage() {
-        return "redact_pet";
-    }
 }

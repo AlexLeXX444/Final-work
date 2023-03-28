@@ -24,7 +24,6 @@
                         <a href="/create_pack_pet">Вьючные животные</a>
                     </div>
                 </div>
-                <a href="/redact_pet" class="active">Изменить</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
 

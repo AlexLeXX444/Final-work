@@ -23,9 +23,7 @@ public class RedactPetController {
     @PostMapping("/redact_hamster")
     public String hamsterEdit(@RequestParam("id") Long id,
                               @RequestParam("petCommands") List<String> petCommands) {
-        Hamster hamster = petService.hamsterById(id);
-        hamster.setPetCommands(petCommands);
-        petService.redactHamster(hamster);
+        petService.redactHamsterCommands(id, petCommands);
         return "redirect:/list_of_pets";
     }
 }
