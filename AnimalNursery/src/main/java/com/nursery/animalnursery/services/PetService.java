@@ -70,4 +70,39 @@ public class PetService {
     public List<Camel> getListCamels() {
         return camelRepository.findAll();
     }
+
+    public Hamster hamsterById(Long id) {
+        return hamsterRepository.findById(id).orElse(null);
+    }
+
+    public Cat catById(Long id) {
+        return catRepository.findById(id).orElse(null);
+    }
+
+    public Dog dogById(Long id) {
+        return dogRepository.findById(id).orElse(null);
+    }
+
+    public Donkey donkeyById(Long id) {
+        return donkeyRepository.findById(id).orElse(null);
+    }
+
+    public Horse horseById(Long id) {
+        return horseRepository.findById(id).orElse(null);
+    }
+
+    public Camel camelById(Long id) {
+        return camelRepository.findById(id).orElse(null);
+    }
+
+    public void redactHamster(Hamster hamster) {
+        Hamster redactedHamster = hamsterRepository.findById(hamster.getId()).orElse(null);
+        if (redactedHamster != null) {
+            redactedHamster.setName(hamster.getName());
+            redactedHamster.setBirthDate(hamster.getBirthDate());
+            redactedHamster.setPetCommands(hamster.getPetCommands());
+            System.out.println(redactedHamster.toString());
+            hamsterRepository.save(redactedHamster);
+        }
+    }
 }

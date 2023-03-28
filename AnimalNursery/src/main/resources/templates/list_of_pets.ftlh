@@ -47,7 +47,7 @@
                         <th>${hamster.name}</th>
                         <th>${hamster.birthDate}</th>
                         <th><#list hamster.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/hamster/${hamster.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>
