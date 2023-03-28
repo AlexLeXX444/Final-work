@@ -69,7 +69,7 @@
                         <th>${cat.name}</th>
                         <th>${cat.birthDate}</th>
                         <th><#list cat.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/cat/${cat.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -88,7 +88,7 @@
                         <th>${dog.name}</th>
                         <th>${dog.birthDate}</th>
                         <th><#list dog.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/dog/${dog.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -108,7 +108,7 @@
                         <th>${donkey.name}</th>
                         <th>${donkey.birthDate}</th>
                         <th><#list donkey.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/donkey/${donkey.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -128,7 +128,7 @@
                         <th>${horse.name}</th>
                         <th>${horse.birthDate}</th>
                         <th><#list horse.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/horse/${horse.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -148,7 +148,7 @@
                         <th>${camel.name}</th>
                         <th>${camel.birthDate}</th>
                         <th><#list camel.petCommands as commands>${commands}</#list></th>
-                        <th><a href="#">Редактировать</a> </th>
+                        <th><a href="/redact/camel/${camel.id}">Редактировать</a> </th>
                     </tr>
                 <#else>
                     <tr>

@@ -102,4 +102,44 @@ public class PetService {
             hamsterRepository.save(redactedHamster);
         }
     }
+
+    public void redactCatCommands(Long id, List<String> petCommands) {
+        Cat redactedCat = catRepository.findById(id).orElse(null);
+        if (redactedCat != null) {
+            redactedCat.setPetCommands(petCommands);
+            catRepository.save(redactedCat);
+        }
+    }
+
+    public void redactDogCommands(Long id, List<String> petCommands) {
+        Dog redactedDog = dogRepository.findById(id).orElse(null);
+        if (redactedDog != null) {
+            redactedDog.setPetCommands(petCommands);
+            dogRepository.save(redactedDog);
+        }
+    }
+
+    public void redactDonkeyCommands(Long id, List<String> petCommands) {
+        Donkey redactedDonkey = donkeyRepository.findById(id).orElse(null);
+        if (redactedDonkey != null) {
+            redactedDonkey.setPetCommands(petCommands);
+            donkeyRepository.save(redactedDonkey);
+        }
+    }
+
+    public void redactHorseCommands(Long id, List<String> petCommands) {
+        Horse redactedHorse = horseRepository.findById(id).orElse(null);
+        if (redactedHorse != null) {
+            redactedHorse.setPetCommands(petCommands);
+            horseRepository.save(redactedHorse);
+        }
+    }
+
+    public void redactCamelCommands(Long id, List<String> petCommands) {
+        Camel redactedCamel = camelRepository.findById(id).orElse(null);
+        if (redactedCamel != null) {
+            redactedCamel.setPetCommands(petCommands);
+            camelRepository.save(redactedCamel);
+        }
+    }
 }
