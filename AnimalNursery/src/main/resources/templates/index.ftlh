@@ -28,7 +28,12 @@
             </div>
 
             <div class="row">
-                <div class="main">Some text</div>
+                <div class="main">Добро подаловать!!!</div><br><br><br>
+                <div class="main">Данна платворма реализует следующий функционал: </div><br>
+                <div class="main">1. Создание питомца; </div><br>
+                <div class="main">2. Просмотр списка всех питомцев; </div><br>
+                <div class="main">3. Редактирование команд питомца; </div><br>
+                <div class="main">4. Удаление питомца. </div><br>
             </div>
 
             <script>
