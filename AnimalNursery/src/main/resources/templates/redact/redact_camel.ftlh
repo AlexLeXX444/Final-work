@@ -14,15 +14,7 @@
 
             <div class="topnav" id="myTopnav">
                 <a href="/">Главная</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Список всех
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/list_of_pets">Все</a>
-                        <a href="#">Молодые</a>
-                    </div>
-                </div>
+                <a href="/list_of_pets">Все животные</a>
                 <div class="dropdown">
                     <button class="dropbtn">Добавить
                         <i class="fa fa-caret-down"></i>

@@ -141,4 +141,28 @@ public class PetService {
             camelRepository.save(redactedCamel);
         }
     }
+
+    public void deleteHamster(Long id) {
+        hamsterRepository.deleteById(id);
+    }
+
+    public void deleteCat(Long id) {
+        catRepository.deleteById(id);
+    }
+
+    public void deleteDog(Long id) {
+        dogRepository.deleteById(id);
+    }
+
+    public void deleteDonkey(Long id) {
+        donkeyRepository.deleteById(id);
+    }
+
+    public void deleteHorse(Long id) {
+        horseRepository.deleteById(id);
+    }
+
+    public void deleteCamel(Long id) {
+        camelRepository.deleteById(id);
+    }
 }

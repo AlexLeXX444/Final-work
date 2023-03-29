@@ -14,15 +14,7 @@
 
             <div class="topnav" id="myTopnav">
                 <a href="/">Главная</a>
-                <div class="dropdown">
-                    <button class="active">Список всех
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/list_of_pets">Все</a>
-                        <a href="#">Молодые</a>
-                    </div>
-                </div>
+                <a href="/list_of_pets" class="active">Все животные</a>
                 <div class="dropdown">
                     <button class="dropbtn">Добавить
                         <i class="fa fa-caret-down"></i>
@@ -41,6 +33,8 @@
                     <th>Имя</th>
                     <th>Дата рождения</th>
                     <th>Список выполняемых команд</th>
+                    <th> </th>
+                    <th> </th>
                 </tr>
             </table>
 
@@ -55,6 +49,7 @@
                         <th>${hamster.birthDate}</th>
                         <th><#list hamster.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/hamster/${hamster.id}">Редактировать</a> </th>
+                        <th><a href="/delete/hamster/${hamster.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -78,6 +73,7 @@
                         <th>${cat.birthDate}</th>
                         <th><#list cat.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/cat/${cat.id}">Редактировать</a> </th>
+                        <th><a href="/delete/cat/${cat.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -97,6 +93,7 @@
                         <th>${dog.birthDate}</th>
                         <th><#list dog.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/dog/${dog.id}">Редактировать</a> </th>
+                        <th><a href="/delete/dog/${dog.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -117,6 +114,7 @@
                         <th>${donkey.birthDate}</th>
                         <th><#list donkey.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/donkey/${donkey.id}">Редактировать</a> </th>
+                        <th><a href="/delete/donkey/${donkey.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -137,6 +135,7 @@
                         <th>${horse.birthDate}</th>
                         <th><#list horse.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/horse/${horse.id}">Редактировать</a> </th>
+                        <th><a href="/delete/horse/${horse.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
@@ -157,6 +156,7 @@
                         <th>${camel.birthDate}</th>
                         <th><#list camel.petCommands as commands>${commands}</#list></th>
                         <th><a href="/redact/camel/${camel.id}">Редактировать</a> </th>
+                        <th><a href="/delete/camel/${camel.id}">Удалить</a> </th>
                     </tr>
                 <#else>
                     <tr>
